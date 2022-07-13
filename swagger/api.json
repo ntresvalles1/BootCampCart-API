@@ -310,6 +310,17 @@
                     "quantity": {
                         "type": "number",
                         "format": "int64"
+                    },
+                    "image_url": {
+                        "type": "string"
+                    },
+                    "is_on_sale": {
+                        "type": "boolean",
+                        "default": false
+                    },
+                    "sale_price": {
+                        "type": "number",
+                        "format": "double"
                     }
                 }
             },
