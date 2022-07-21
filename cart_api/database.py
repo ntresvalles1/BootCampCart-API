@@ -93,6 +93,7 @@ class DatabaseCartItem(BaseModel):
     name = CharField()
     price = DoubleField()
     quantity = IntegerField()
+    image_url = CharField(null=True)
 
 
 # BOOTCAMPERS: Don't modify anything below

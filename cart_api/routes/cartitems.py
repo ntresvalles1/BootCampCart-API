@@ -26,6 +26,7 @@ class CartItems:
             name=cart.get("name"),
             price=cart.get("price"),
             quantity=cart.get("quantity"),
+            image_url=cart.get("image_url")
         )
         new_cartItem.save()
         resp.media = model_to_dict(new_cartItem)
@@ -41,7 +42,7 @@ class CartItem:
         cart_product = DatabaseCartItem.get(id=cart_id)
         resp.media = model_to_dict(cart_product)
         resp.status = falcon.HTTP_200
-   
+  
     def on_patch(self, req, resp, cart_id):
         cart_product = DatabaseCartItem.get(id=cart_id)
         changes = req.media
