@@ -94,6 +94,8 @@ class DatabaseCartItem(BaseModel):
     price = DoubleField()
     quantity = IntegerField()
     image_url = CharField(null=True)
+    is_on_sale = BooleanField(default=False)
+    sale_price = DoubleField()
 
 
 # BOOTCAMPERS: Don't modify anything below

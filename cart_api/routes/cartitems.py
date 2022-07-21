@@ -26,7 +26,9 @@ class CartItems:
             name=cart.get("name"),
             price=cart.get("price"),
             quantity=cart.get("quantity"),
-            image_url=cart.get("image_url")
+            image_url=cart.get("image_url"),
+            is_on_sale=cart.get("is_on_sale"),
+            sale_price=cart.get("sale_price")
         )
         new_cartItem.save()
         resp.media = model_to_dict(new_cartItem)
